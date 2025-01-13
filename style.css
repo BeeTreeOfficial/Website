@@ -1,0 +1,269 @@
+/* pixelify-sans-latin-400-normal */
+/* pixelify-sans-latin-400-normal */
+@font-face {
+    font-family: 'CustomFont'; /* Name your font */
+    src: url('Minecraft-Seven_v2.woff2') format('woff2');
+    font-weight: normal; /* Specify the weight if needed */
+    font-style: normal;  /* Specify the style if needed */
+  }
+
+  
+
+
+html,
+body {
+    height: 100%;
+    text-shadow: 0px 5px 11px #0000008d;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'CustomFont', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.top-content {
+    display: flex;
+    padding: 5% 10%;
+    background-color: red;
+    box-sizing: border-box;
+    background-image: url(img/first-bg.webp);
+    background-size: cover;
+    min-height: 100%;
+    align-items: baseline;
+}
+
+.right-info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.ico {
+    width: 60%;
+    margin-right: 15%;
+    filter: drop-shadow(0px 0px 16px rgb(0, 0, 0, 1));
+    transform: scaleX(-1)
+}
+
+.main-info {
+    margin-top: 1vh;
+    width: 40%;
+    min-width: min-content;
+    height: fit-content;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow: none;
+}
+
+
+
+nav>p {
+    padding: 1.5%;
+    background-color: rgba(0, 0, 0, 0.504);
+    border: solid #5f5f5f;
+    border-width: 3px 0 3px 3px;
+}
+
+.last_nav {
+    border-width: 3px 3px 3px 3px;
+    border-radius: 0 5vh 5vh 0;
+    margin-right: 7%;
+
+}
+
+.first_nav {
+    border-radius: 5vh 0 0 5vh;
+
+
+}
+
+nav {
+    right: 10%;
+    top: 0;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row-reverse;
+}
+
+.main-info>h1 {
+    margin-bottom: 0;
+    line-height: 0.8;
+    margin-left: 7%;
+    color: #ebbc2e;
+    text-shadow: 0 1px 0 #4C4C4C, 0 2px 0 #4C4C4C, 0 3px 0 #4C4C4C, 0 4px 0 #4C4C4C, 0 5px 0 #000000, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.server-desc {
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.567);
+    border: groove gray 4px;
+    border-radius: 5vh;
+    padding: 3% 4%;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+
+.personnel {
+    line-height: 2rem;
+    margin: 0;
+}
+
+.btn_join_server {
+    background-color: #e5af23;
+    margin-top: 1%;
+    border-radius: 5vh;
+    padding: 3%;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: 'CustomFont', sans-serif;
+}
+
+.btn_join_server:hover {
+    background-color: wheat;
+    text-decoration: underline;
+}
+
+
+
+.beehive_icon {
+    width: 20%;
+    margin-left: 3%;
+    height: 100%;
+}
+
+.beekeepers {
+    margin: 1% 1%;
+    padding: 4%;
+    border-radius: 4vh;
+    border: #000000 groove 5px;
+    background-color: #e5af23;
+    height: 100%;
+    min-width: 40%;
+    box-sizing: border-box;
+}
+
+
+.beekeep {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    align-items: center;
+
+}
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.ov {
+    position: absolute;
+    visibility: visible;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.down {
+    transform: scaleY(-1);
+    bottom: 0;
+}
+
+
+.rightdown {
+    right: 0;
+    bottom: 0;
+    transform: scale(-1, -1);
+}
+
+
+.ov {
+    filter: drop-shadow(0px 5px 16px #51380a);
+}
+
+.top {
+    top: 0;
+}
+
+/* Define the "appear from above" animation */
+@keyframes appearFromAbove {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to all div and nav elements inside .top-content */
+.top-content div,
+.top-content nav {
+    opacity: 0;
+    /* Start with elements invisible */
+    animation: appearFromAbove 1s ease-in-out forwards;
+}
+
+/* Add staggered delays for each child element */
+.top-content div:nth-child(1),
+.top-content nav:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.top-content div:nth-child(2),
+.top-content nav:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.top-content div:nth-child(3),
+.top-content nav:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.top-content div:nth-child(4),
+.top-content nav:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.top-content div:nth-child(5),
+.top-content nav:nth-child(5) {
+    animation-delay: 1s;
+}
+
+@media(max-width:840px) {
+    .top-content {
+        flex-direction: column;
+    }
+
+    .main-info {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 3%;
+        animation: appearFromAbove 9s ease-in-out forwards;
+    }
+}

@@ -38,6 +38,7 @@ function info (element){
     dNew.querySelector("div").style.backgroundImage = "none"
     dNew.querySelector("h1").innerText = element.dataset.header
     dNew.querySelector("p").innerText = element.dataset.text
+    
 }
 
 function closepopup(){

@@ -9,7 +9,6 @@
     /* Specify the style if needed */
 }
 
-
 /* Global Styles */
 html,
 body {
@@ -58,11 +57,12 @@ p {
 
 .main-info {
     margin-top: 1vh;
-    width: 40%;
+    width: 60%;
     min-width: min-content;
     height: fit-content;
     box-sizing: border-box;
     overflow: none;
+    max-height: 100%;
 }
 
 /* Navigation Styles */
@@ -246,7 +246,6 @@ p {
 @media (max-width: 840px) {
     .top-content {
         flex-direction: column;
-        overflow-y: clip;
     }
 
     .main-info {
@@ -266,6 +265,10 @@ p {
 
     .right-info {
         align-items: center;
+    }
+    
+    .ico{
+        display: none;
     }
 }
 
@@ -358,6 +361,7 @@ header.screenshots>button.gallery>img {
     width: 100%;
     overflow-x: auto;
     height: 50%;
+    flex-direction: row;
     background-color: rgb(122, 97, 48);
 }
 
@@ -408,7 +412,7 @@ header.screenshots>button.gallery>img {
     background-color: rgba(254, 254, 254, 0.038);
     position: fixed;
     left: 0;
-    top: 0;
+    top:0;
     backdrop-filter: blur(6px);
 }
 
@@ -428,6 +432,8 @@ header.screenshots>button.gallery>img {
     background-position: center center;
 }
 
-.scrollable {
+.scrollable{
     overflow-y: auto;
 }
+
+

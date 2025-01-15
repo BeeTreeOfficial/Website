@@ -1,15 +1,16 @@
-/* pixelify-sans-latin-400-normal */
-/* pixelify-sans-latin-400-normal */
+/* Font Definitions */
 @font-face {
-    font-family: 'CustomFont'; /* Name your font */
+    font-family: 'CustomFont';
+    /* Name your font */
     src: url('Minecraft-Seven_v2.woff2') format('woff2');
-    font-weight: normal; /* Specify the weight if needed */
-    font-style: normal;  /* Specify the style if needed */
-  }
+    font-weight: normal;
+    /* Specify the weight if needed */
+    font-style: normal;
+    /* Specify the style if needed */
+}
 
-  
 
-
+/* Global Styles */
 html,
 body {
     height: 100%;
@@ -21,8 +22,14 @@ body {
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
+p {
+    margin: 0;
+}
+
+/* Top Content Styles */
 .top-content {
     display: flex;
     padding: 5% 10%;
@@ -30,7 +37,7 @@ body {
     box-sizing: border-box;
     background-image: url(img/first-bg.webp);
     background-size: cover;
-    min-height: 100%;
+    height: 100%;
     align-items: baseline;
 }
 
@@ -42,12 +49,11 @@ body {
     align-items: flex-end;
 }
 
-
 .ico {
     width: 60%;
     margin-right: 15%;
     filter: drop-shadow(0px 0px 16px rgb(0, 0, 0, 1));
-    transform: scaleX(-1)
+    transform: scaleX(-1);
 }
 
 .main-info {
@@ -55,43 +61,39 @@ body {
     width: 40%;
     min-width: min-content;
     height: fit-content;
-    min-height: 100%;
     box-sizing: border-box;
     overflow: none;
 }
 
-
-
-nav>p {
-    padding: 1.5%;
-    background-color: rgba(0, 0, 0, 0.504);
-    border: solid #5f5f5f;
-    border-width: 3px 0 3px 3px;
-}
-
-.last_nav {
-    border-width: 3px 3px 3px 3px;
-    border-radius: 0 5vh 5vh 0;
-    margin-right: 7%;
-
-}
-
-.first_nav {
-    border-radius: 5vh 0 0 5vh;
-
-
-}
-
-nav {
-    right: 10%;
-    top: 0;
+/* Navigation Styles */
+.navbar {
     display: flex;
-    padding: 0;
-    width: 100%;
-    height: fit-content;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: end;
+    list-style: none;
+    gap: 3%;
+    background-color: #e5af23;
+    border-radius: 10vh;
+    border: 3px black solid;
+    padding-inline-start: 4%;
+    padding-inline-end: 4%;
 }
 
+.navbar>li {
+    padding: 3% 0;
+    margin: 0;
+    padding-right: 3%;
+    border-right: 3px solid black;
+}
+
+.navbar>li:last-child {
+    padding: 3% 0;
+    margin: 0;
+    border-right: 0;
+}
+
+/* Main Information Styles */
 .main-info>h1 {
     margin-bottom: 0;
     line-height: 0.8;
@@ -101,18 +103,12 @@ nav {
 }
 
 .server-desc {
-    height: 50%;
     background-color: rgba(0, 0, 0, 0.567);
     border: groove gray 4px;
     border-radius: 5vh;
     padding: 3% 4%;
     overflow: hidden;
 }
-
-p {
-    margin: 0;
-}
-
 
 .personnel {
     line-height: 2rem;
@@ -133,12 +129,12 @@ p {
     text-decoration: underline;
 }
 
-
-
+/* Beehive Styles */
 .beehive_icon {
-    width: 20%;
     margin-left: 3%;
-    height: 100%;
+    height: 9vh;
+    width: 9vh;
+    max-width: 100%;
 }
 
 .beekeepers {
@@ -152,21 +148,19 @@ p {
     box-sizing: border-box;
 }
 
-
 .beekeep {
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
-    height: 10%;
     align-items: center;
-
+    flex: 0 0 auto;
 }
 
-
+/* Overlay Styles */
 .overlay {
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
 }
 
 .ov {
@@ -188,13 +182,11 @@ p {
     bottom: 0;
 }
 
-
 .rightdown {
     right: 0;
     bottom: 0;
     transform: scale(-1, -1);
 }
-
 
 .ov {
     filter: drop-shadow(0px 5px 16px #51380a);
@@ -204,7 +196,7 @@ p {
     top: 0;
 }
 
-/* Define the "appear from above" animation */
+/* Animation Styles */
 @keyframes appearFromAbove {
     from {
         opacity: 0;
@@ -217,7 +209,6 @@ p {
     }
 }
 
-/* Apply the animation to all div and nav elements inside .top-content */
 .top-content div,
 .top-content nav {
     opacity: 0;
@@ -251,13 +242,19 @@ p {
     animation-delay: 1s;
 }
 
-@media(max-width:840px) {
+/* Media Query Styles */
+@media (max-width: 840px) {
     .top-content {
         flex-direction: column;
+        overflow-y: clip;
     }
 
     .main-info {
         width: 100%;
+    }
+
+    div.images {
+        width: 85%;
     }
 
     nav {
@@ -266,4 +263,171 @@ p {
         margin-top: 3%;
         animation: appearFromAbove 9s ease-in-out forwards;
     }
+
+    .right-info {
+        align-items: center;
+    }
+}
+
+/* Mid Content Styles */
+div.mid-content {
+    display: flex;
+    background-color: red;
+    box-sizing: border-box;
+    background-size: cover;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/secondbg.jpg);
+}
+
+header.screenshots {
+    width: 100%;
+    height: fit-content;
+    background-color: #cda350;
+    border: solid rgba(255, 255, 255, 0.3);
+    border-width: 6px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.screenshots>button.gallery {
+    height: 6vh;
+    width: 6vh;
+    background-color: #0000007a;
+    padding: 0 5px;
+    border-radius: 7vh;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+header.screenshots>button.gallery:hover {
+    background-color: rgb(0, 0, 0);
+    height: 7.5vh;
+    width: 7.5vh;
+}
+
+header.screenshots>button.gallery>img {
+    width: 100%;
+}
+
+@keyframes appearing {
+    0% {
+        height: 0;
+        bottom: 40vh;
+    }
+
+    100% {
+        bottom: 0;
+        height: 70vh;
+    }
+}
+
+.animate {
+    animation: appearing 1s;
+}
+
+.images {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2%;
+    overflow-x: auto;
+    width: 60%;
+    height: 70vh;
+    background-color: rgba(205, 163, 80, 0.4);
+}
+
+.inv {
+    visibility: hidden;
+    display: none;
+}
+
+.news {
+    height: 100%;
+}
+
+.hline {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2%;
+    width: 100%;
+    overflow-x: auto;
+    height: 50%;
+    background-color: rgb(122, 97, 48);
+}
+
+.ic {
+    height: 100%;
+}
+
+.newsInstance {
+    background-color: #f08c00;
+    width: fit-content;
+    border-radius: 3vh;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.newsHeader {
+    background-color: gray;
+    border-radius: 0 0 3vh 3vh;
+    border: solid black;
+    border-width: 3px 6px 6px 6px;
+    padding: 3%;
+    margin: 0;
+    overflow: hidden;
+    height: 30%;
+    box-sizing: border-box;
+}
+
+.newsImage {
+    background-image: url(shitpost/1.png);
+    height: 70%;
+    width: 30vh;
+    border-radius: 3vh 3vh 0 0;
+    border: solid black;
+    border-width: 6px 6px 0 6px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: border-box;
+}
+
+.boxer {
+    height: 100%;
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: rgba(254, 254, 254, 0.038);
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(6px);
+}
+
+.newsFull {
+    height: 60%;
+    background-color: #d19c0b;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-radius: 3vh;
+    overflow-y: auto;
+    background-position: center center;
+}
+
+.scrollable {
+    overflow-y: auto;
 }

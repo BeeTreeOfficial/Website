@@ -7,25 +7,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
-<body>
+<body class="scrollable">
     <div class="overlay" style="visibility: hidden;">
         <img src="img/honey-border.webp" class="ov left up">
-
         <img src="img/honey-border.webp" class="ov right top">
-        <img src="img/honey-border.webp" class="ov rightdown">
-        <img src="img/honey-border.webp" class="ov left down">
+
 
 
     </div>
 
+
+
+
+
     <div class="top-content">
         <div class="main-info">
             <h1>BeeTree</h1>
-            <div class="server-desc">
-                <p> Присоединяйтесь к нашему сообществу и наслаждайтесь уникальным опытом Minecraft.<br> Пользовательскими
+            <div class="server-desc inf">
+                <p> Присоединяйтесь к нашему сообществу и наслаждайтесь уникальным опытом Minecraft.<br>
+                    Пользовательскими
                     плагинами, дружелюбным персоналом и активной базой игроков.</p>
                 <button class="btn_join_server">Получить Айпи</button>
             </div>
@@ -33,27 +36,87 @@
                 <img src="img/The-beekeepers.webp" class="beehive_icon">
                 <p class="beekeepers">Наши Пасечники:</p>
             </div>
-            <div class="server-desc">
+            <div class="server-desc pers">
                 <ul class="personnel">
-                   <li>DanaQai</li>
-                   <li>I Love Big liminal spaces</li>
-                   <li>Esqp.exe (кися)</li>
+                    <li>DanaQai</li>
+                    <li>I Love Big liminal spaces</li>
+                    <li>Esqp.exe (кися)</li>
                 </ul>
             </div>
         </div>
         <div class="right-info">
-            <nav>
-                <p class="last_nav" style="background-color: rgb(165, 19, 19);"><a>Ютуб</a></p>
-                <p style="background-color: rgb(21, 55, 128);"><a>Дискорд</a></p>
-                <p class="first_nav" style="background-color: orange;"><a>Бусти</a></p>
-            </nav>
+            <ul class="navbar">
+                <li>Youtube</li>
+                <li>Boosty</li>
+                <li>Discord</li>
+            </ul>
             <img src="Beemain.webp" alt="Пчелка" class="ico">
+        </div>
+    </div>
+
+    <div class="mid-content">
+        <header class="screenshots"><button id="#button" class="gallery"><img
+                    src="icons/gallery_thumbnail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></button></header>
+        <h2 class="inv midh">Новости и События</h2>
+        <div class="images server-desc inv" id="#animatedElement">
+            <div class="hline">
+                <div class="newsInstance" data-header="Создание Сайта"
+                    data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+                    <div class="newsImage"></div>
+                    <h3 class="newsHeader">Peak Fiction</h3>
+                </div>
+                <div class="newsInstance" data-header="Создание Сайта"
+                data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+                <div class="newsImage"></div>
+                <h3 class="newsHeader">Peak Fiction</h3>
+            </div>
+            <div class="newsInstance" data-header="Создание Сайта"
+            data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+            <div class="newsImage"></div>
+            <h3 class="newsHeader">Peak Fiction</h3>
+        </div>
+        <div class="newsInstance" data-header="Создание Сайта"
+        data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+        <div class="newsImage"></div>
+        <h3 class="newsHeader">Peak Fiction</h3>
+    </div>
+    <div class="newsInstance" data-header="Создание Сайта"
+    data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+    <div class="newsImage"></div>
+    <h3 class="newsHeader">Peak Fiction</h3>
+</div>
+<div class="newsInstance" data-header="Создание Сайта"
+data-text="10 января 2025 года был создан дайнный сайт." onclick="info(this)">
+<div class="newsImage"></div>
+<h3 class="newsHeader">Peak Fiction</h3>
+</div>  
+            </div>
+            <h4>Лучшие Скриншоты Игроков</h4>
+            <div class="hline">
+                <div class="newsInstance" data-bgimg="url('shitpost/1.png')" onclick="info(this)">
+                    <div class="newsImage"  style="background-image: url(shitpost/10.png);"></div>
+                    <h3 class="newsHeader">Peak Fiction</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="boxer inv" id="popup" onclick="closepopup()">
+        <div class="newsFull">
+            <h1>Событие</h1>
+            <p>Описание События
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe reprehenderit mollitia
+                exercitationem. Obcaecati molestiae dicta porro facere inventore, officia, eius rerum, voluptas adipisci
+                nulla in accusantium quod vitae consequuntur.
+            </p>
         </div>
     </div>
 
 
 
-    <script src="" async defer></script>
+
+    <script src="script.js" async defer></script>
 </body>
 
 </html>

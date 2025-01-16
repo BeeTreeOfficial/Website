@@ -38,6 +38,7 @@ p {
     background-size: cover;
     height: 100%;
     align-items: baseline;
+    min-height: fit-content;
 }
 
 .right-info {
@@ -45,6 +46,7 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
+    min-height: fit-content;
     align-items: flex-end;
 }
 
@@ -98,6 +100,7 @@ p {
     margin-bottom: 0;
     line-height: 0.8;
     margin-left: 7%;
+    z-index: 10;
     color: #ebbc2e;
     text-shadow: 0 1px 0 #4C4C4C, 0 2px 0 #4C4C4C, 0 3px 0 #4C4C4C, 0 4px 0 #4C4C4C, 0 5px 0 #000000, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
@@ -246,6 +249,7 @@ p {
 @media (max-width: 840px) {
     .top-content {
         flex-direction: column;
+        max-height: fit-content;
     }
 
     .main-info {
@@ -270,6 +274,8 @@ p {
     .ico{
         display: none;
     }
+
+
 }
 
 /* Mid Content Styles */
@@ -434,6 +440,16 @@ header.screenshots>button.gallery>img {
 
 .scrollable{
     overflow-y: auto;
+}
+
+
+.inflat{
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.inflat:hover{
+    scale: 1.1;
+    filter: sepia(60%);
 }
 
 

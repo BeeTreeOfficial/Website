@@ -270,8 +270,8 @@ p {
     .right-info {
         align-items: center;
     }
-    
-    .ico{
+
+    .ico {
         display: none;
     }
 
@@ -418,7 +418,7 @@ header.screenshots>button.gallery>img {
     background-color: rgba(254, 254, 254, 0.038);
     position: fixed;
     left: 0;
-    top:0;
+    top: 0;
     backdrop-filter: blur(6px);
 }
 
@@ -438,18 +438,141 @@ header.screenshots>button.gallery>img {
     background-position: center center;
 }
 
-.scrollable{
+.scrollable {
     overflow-y: auto;
 }
 
 
-.inflat{
+.inflat {
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.inflat:hover{
+.inflat:hover {
     scale: 1.1;
     filter: sepia(60%);
 }
 
 
+card {
+    display: block;
+    background-color: rgb(86, 46, 16);
+    width: 40vh;
+    height: 60vh;
+    transition: transform 1s ease;
+    border-radius: 3vh;
+    padding: 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/event.webp);
+    filter: drop-shadow(1px 1px 10px black);
+    flex-shrink: 0;
+}
+
+@keyframes spin{
+    0%{
+    }
+
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+card:hover {
+    animation: 0.3s spin cubic-bezier(1, 0, 0, 1);
+    animation-play-state: running;
+    filter:  drop-shadow(0px 0px 20px red)
+}
+
+.hline:has(card:hover) > card{
+
+    filter: blur(1px) contrast(0.3);
+    
+}
+.hline:has(card:hover) > card:hover{
+    filter: none;
+    filter:  drop-shadow(0px 0px 20px rgb(255, 170, 0))
+}
+
+
+
+.blurredBg:has(+ div.hline > card:hover) {
+    filter: blur(10px);
+}
+
+.blurredBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(255, 0, 0);
+    background-image: url(2025-01-17_14.00.08.png);
+    background-size: cover;
+    scale: 1.1;
+    transition: filter 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.pray{
+    background-color: rgba(0, 0, 0, 0.452);
+    box-sizing: border-box;
+    padding: 6%;
+    color: #ffee5a;
+    margin: 0;
+    border-radius: 3vh;
+    border: solid gray;
+}
+
+.chest{
+    background-color: rgba(0, 0, 0, 0.597);
+    width: 100%;
+    height: 70%;
+    margin-top: 4%;
+    border-radius: 3vh;
+    border: #000000 solid 5px;
+    padding: 0 3%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: clip;
+}
+
+.openchestbutton{
+    background-color: #f3bd0d;
+    height: 10%;
+    width: 100%;
+    margin: 3%;
+    margin-bottom: 0;
+    border-radius: 3vh;
+    color: rgba(0, 0, 0, 0);
+    transition: color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.openchestbutton:hover{
+    color: rgb(0, 0, 0);
+    background-color: #ffee5a;
+    border-color: black;
+}
+
+.hline:has(card){
+    height: fit-content;
+    background-color: #00000000;
+    justify-content: center;
+    overflow-x: visible;
+    padding-left: 5%;
+    flex-direction: row-reverse;
+}   
+
+h4{
+    margin: 3px 0;
+    text-align: center;
+
+    
+}
+.scrollablex{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}

@@ -470,42 +470,39 @@ card {
     flex-shrink: 0;
 }
 
-@keyframes spin{
-    0%{
-    }
+@keyframes spin {
+    0% {}
 
 
-    50%{
-        
-    }
+    50% {}
 
-    100%{
-    }
+    100% {}
 }
 
 
 
 
-card{
+card {
     scale: 0.9;
     transition: all 0.8s cubic-bezier(1, 0, 0, 1);
     filter: blur(1px) contrast(0.3);
 
 
-    
+
 }
 
-.hline:has(card:hover) > card:hover{
+.hline:has(card:hover)>card:hover {
     animation: 0.3s spin cubic-bezier(1, 0, 0, 1);
     animation-play-state: running;
     transition: all 0.8s cubic-bezier(1, 0, 0, 1);
-    scale: 1.1;
-    filter:  drop-shadow(0px 0px 20px rgb(255, 170, 0));
+    scale: 1.01;
+    filter: drop-shadow(0px 0px 20px rgb(255, 170, 0));
     outline: #000000 5px solid;
     z-index: 199;
+    font-size: 0.87rem;
 }
 
-.hline:has(card:hover){
+.hline:has(card:hover) {
     gap: 0;
 
 
@@ -528,7 +525,7 @@ card{
     transition: filter 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.pray{
+.pray {
     background-color: rgba(0, 0, 0, 0.452);
     box-sizing: border-box;
     padding: 6%;
@@ -538,7 +535,7 @@ card{
     border: solid gray;
 }
 
-.chest{
+.chest {
     background-color: rgba(0, 0, 0, 0.597);
     width: 100%;
     height: 70%;
@@ -551,7 +548,7 @@ card{
     overflow-x: clip;
 }
 
-.openchestbutton{
+.openchestbutton {
     background-color: #f3bd0d;
     height: 10%;
     width: 100%;
@@ -563,29 +560,67 @@ card{
     transition: color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.openchestbutton:hover{
+.openchestbutton:hover {
     color: rgb(0, 0, 0);
     background-color: #ffee5a;
     border-color: black;
 }
 
-.hline:has(card){
+.hline:has(card) {
     height: fit-content;
     background-color: #00000000;
-    justify-content: center;
-    overflow-x: visible;
-    padding-left: 5%;
-    flex-direction: row-reverse;
-}   
+    
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.3%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
 
-h4{
+}
+
+.hline::before{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    transition: all 1s cubic-bezier(1, 0, 0, 1);
+    scale: 1.1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("2025-01m\,-17_14.00.08.png");
+}
+
+
+.hline:has(card:hover)::before{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("2025-01m\,-17_14.00.08.png");
+    filter: blur(5px);
+}
+
+
+h4 {
     margin: 3px 0;
     text-align: center;
 
-    
+
 }
-.scrollablex{
+
+.scrollablex {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
+}
+
+
+button {
+    font-family: 'CustomFont';
 }

@@ -1,1 +1,1 @@
-# Websitehttps://beetreeofficial.github.io/Website/
+https://beetreeofficial.github.io/Website/

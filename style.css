@@ -251,11 +251,20 @@ p {
         flex-direction: column;
         max-height: fit-content;
     }
-    
-    .hline:has(card){
-        flex-direction: column;
-        overflow-y: auto;
+    .navbar{
+        position: static;
     }
+    div.hline:has(card){
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+    card{
+        min-width: 90%;
+    }
+
+
+    
+
     .main-info {
         width: 100%;
     }
@@ -365,7 +374,6 @@ header.screenshots>button.gallery>img {
 
 .hline {
     transition: gap 0.8s cubic-bezier(1, 0, 0, 1);
-    display: flex;
     flex-wrap: nowrap;
     gap: 2%;
     width: 100%;
@@ -573,7 +581,7 @@ card {
 .hline:has(card) {
     height: fit-content;
     background-color: #00000000;
-    
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 0.3%;
@@ -584,7 +592,7 @@ card {
 
 }
 
-.hline::before{
+body > .boxer > .hline::before{
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;

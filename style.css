@@ -251,7 +251,11 @@ p {
         flex-direction: column;
         max-height: fit-content;
     }
-
+    
+    .hline:has(card){
+        flex-direction: column;
+        overflow-y: auto;
+    }
     .main-info {
         width: 100%;
     }

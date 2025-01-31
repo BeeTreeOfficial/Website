@@ -373,6 +373,7 @@ header.screenshots>button.gallery>img {
 }
 
 .hline {
+    display: flex;
     transition: gap 0.8s cubic-bezier(1, 0, 0, 1);
     flex-wrap: nowrap;
     gap: 2%;
@@ -380,7 +381,8 @@ header.screenshots>button.gallery>img {
     overflow-x: auto;
     height: 50%;
     flex-direction: row;
-    background-color: rgb(122, 97, 48);
+    background-color: rgba(122, 97, 48, 0.685);
+    border-radius: 20px;
 }
 
 .ic {
@@ -416,6 +418,7 @@ header.screenshots>button.gallery>img {
     border-width: 6px 6px 0 6px;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
     box-sizing: border-box;
 }
 
@@ -461,7 +464,11 @@ header.screenshots>button.gallery>img {
 
 .inflat:hover {
     scale: 1.1;
-    filter: sepia(60%);
+    filter: brightness(110%);
+}
+
+.hline > .inflat:hover{
+    scale: 0.96;
 }
 
 
@@ -513,6 +520,8 @@ card {
     z-index: 199;
     font-size: 0.87rem;
 }
+
+
 
 .hline:has(card:hover) {
     gap: 0;
